@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".minutestoseconds.ConvertMinutesToSecondsActivity">
+
+    <EditText
+        android:id="@+id/minutes_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="give minutes"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="73dp" />
+
+    <Button
+        android:id="@+id/convert_to_seconds_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#F203FB"
+        android:text="ConvertToSeconds"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/minutes_txt"
+        app:layout_constraintStart_toStartOf="@+id/minutes_txt"
+        app:layout_constraintTop_toBottomOf="@+id/minutes_txt" />
+
+    <TextView
+        android:id="@+id/seconds_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="seconds"
+        app:layout_constraintBottom_toTopOf="@+id/convert_to_seconds_btn"
+        app:layout_constraintEnd_toEndOf="@+id/minutes_txt"
+        app:layout_constraintStart_toStartOf="@+id/minutes_txt"
+        app:layout_constraintTop_toBottomOf="@+id/minutes_txt" />
+</androidx.constraintlayout.widget.ConstraintLayout>
