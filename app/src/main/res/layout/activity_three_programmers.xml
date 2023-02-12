@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".threeprogrammers.ThreeProgrammersActivity">
 
     <TextView
@@ -11,19 +12,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="paid1"
-        app:layout_constraintBottom_toTopOf="@+id/paid_one"
-        app:layout_constraintStart_toStartOf="@+id/paid_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <EditText
-        android:id="@+id/paid_one"
+        android:id="@+id/pr_one_salary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
@@ -31,18 +35,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="paid2"
-        app:layout_constraintBottom_toTopOf="@+id/paid_two"
-        app:layout_constraintStart_toStartOf="@+id/paid_two"
-        app:layout_constraintTop_toBottomOf="@+id/paid_one" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pr_one_salary" />
 
     <EditText
-        android:id="@+id/paid_two"
+        android:id="@+id/pr_two_salary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="@+id/pr_one_salary"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/pr_one_salary"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
@@ -50,36 +57,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="paid3"
-        app:layout_constraintBottom_toTopOf="@+id/paid_three"
-        app:layout_constraintStart_toStartOf="@+id/paid_three"
-        app:layout_constraintTop_toBottomOf="@+id/paid_two" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pr_two_salary" />
 
     <EditText
-        android:id="@+id/paid_three"
+        android:id="@+id/pr_three_salary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/defference_btn"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.5"
-        tools:layout_editor_absoluteX="18dp" />
+        app:layout_constraintEnd_toEndOf="@+id/pr_two_salary"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/pr_two_salary"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <Button
         android:id="@+id/defference_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Defference"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="469dp" />
+        app:layout_constraintEnd_toEndOf="@+id/pr_three_salary"
+        app:layout_constraintStart_toStartOf="@+id/pr_three_salary"
+        app:layout_constraintTop_toBottomOf="@+id/pr_three_salary" />
 
     <TextView
         android:id="@+id/defference_txt"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/defference_btn"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="@+id/defference_btn"
-        tools:layout_editor_absoluteY="561dp" />
+        app:layout_constraintTop_toBottomOf="@+id/defference_btn"
+        app:layout_constraintVertical_bias="0.183" />
 </androidx.constraintlayout.widget.ConstraintLayout>
