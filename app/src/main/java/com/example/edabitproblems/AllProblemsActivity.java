@@ -11,6 +11,7 @@ import com.example.edabitproblems.databinding.ActivityMainBinding;
 import com.example.edabitproblems.hoursMinutesIntoSeconds.HoursAndMinutesIntoSecondsActivity;
 import com.example.edabitproblems.minutestoseconds.ConvertMinutesToSecondsActivity;
 import com.example.edabitproblems.threeprogrammers.ThreeProgrammersActivity;
+import com.example.edabitproblems.twoMakesTen.TwoMakesTenActivity;
 
 public class AllProblemsActivity extends AppCompatActivity {
 
@@ -24,6 +25,7 @@ public class AllProblemsActivity extends AppCompatActivity {
         threeProgrammers();
         convertMinutesIntoSeconds();
         convertHoursToMinutesIntoSeconds();
+        twoMakesTen();
     }
 
     private void threeProgrammers() {
@@ -43,6 +45,13 @@ public class AllProblemsActivity extends AppCompatActivity {
     private void convertHoursToMinutesIntoSeconds() {
         binding.hoursMinutesSecondsBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, HoursAndMinutesIntoSecondsActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void twoMakesTen() {
+        binding.twoTenBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, TwoMakesTenActivity.class);
             startActivity(intent);
         });
     }
