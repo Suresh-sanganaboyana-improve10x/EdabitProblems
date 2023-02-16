@@ -6,7 +6,7 @@ import org.junit.Assert;
 
 public class MinutesToSecondControllerImplTest extends TestCase {
 
-    public void testMinutesToSeconds() {
+    public void testMinutesToSeconds() throws Exception {
         int expectedOutput = 60;
         int actualOutput = new MinutesToSecondControllerImpl().minutesToSeconds("1");
         Assert.assertEquals(expectedOutput, actualOutput);

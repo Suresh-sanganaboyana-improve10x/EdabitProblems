@@ -4,7 +4,7 @@ import android.util.Log;
 
 public class MinutesToSecondControllerImpl implements MinutesToSecondsController{
     @Override
-    public int minutesToSeconds(String minutes) {
+    public int minutesToSeconds(String minutes) throws Exception {
         int seconds = 0;
         try {
             int minutesInInt = Integer.parseInt(minutes);

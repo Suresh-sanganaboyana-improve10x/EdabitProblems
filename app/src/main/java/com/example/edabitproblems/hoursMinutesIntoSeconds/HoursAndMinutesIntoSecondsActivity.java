@@ -3,6 +3,7 @@ package com.example.edabitproblems.hoursMinutesIntoSeconds;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.edabitproblems.R;
 import com.example.edabitproblems.databinding.ActivityHoursAndMinutesIntoSecondsBinding;
@@ -38,5 +39,7 @@ public class HoursAndMinutesIntoSecondsActivity extends AppCompatActivity implem
     @Override
     public void getSeconds(String message) {
         binding.secondsTxt.setText(message);
+        binding.secondsTxt.setVisibility(View.VISIBLE);
+
     }
 }

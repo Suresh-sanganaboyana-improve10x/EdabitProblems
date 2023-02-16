@@ -34,6 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="seconds"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/convert_to_seconds_btn"
         app:layout_constraintEnd_toEndOf="@+id/minutes_txt"
         app:layout_constraintStart_toStartOf="@+id/minutes_txt"
