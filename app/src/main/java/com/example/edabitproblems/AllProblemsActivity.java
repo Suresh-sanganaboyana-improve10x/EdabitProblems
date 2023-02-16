@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.example.edabitproblems.databinding.ActivityAllProblemsBinding;
 import com.example.edabitproblems.databinding.ActivityMainBinding;
 import com.example.edabitproblems.hoursMinutesIntoSeconds.HoursAndMinutesIntoSecondsActivity;
+import com.example.edabitproblems.lessthanhundred.LessThanHundredActivity;
 import com.example.edabitproblems.minutestoseconds.ConvertMinutesToSecondsActivity;
 import com.example.edabitproblems.threeprogrammers.ThreeProgrammersActivity;
 import com.example.edabitproblems.twoMakesTen.TwoMakesTenActivity;
@@ -26,6 +27,7 @@ public class AllProblemsActivity extends AppCompatActivity {
         convertMinutesIntoSeconds();
         convertHoursToMinutesIntoSeconds();
         twoMakesTen();
+        findLessThanHundredBtn();
     }
 
     private void threeProgrammers() {
@@ -52,6 +54,13 @@ public class AllProblemsActivity extends AppCompatActivity {
     private void twoMakesTen() {
         binding.twoTenBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, TwoMakesTenActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void findLessThanHundredBtn() {
+        binding.lessThanHundredBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, LessThanHundredActivity.class);
             startActivity(intent);
         });
     }
