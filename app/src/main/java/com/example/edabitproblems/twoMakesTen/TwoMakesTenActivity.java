@@ -25,9 +25,16 @@ public class TwoMakesTenActivity extends AppCompatActivity implements TwoMakesTe
         binding.twoMakesTenBtn.setOnClickListener(v -> {
             String firstParam = binding.firstParamTxt.getText().toString();
             String secondParam = binding.secondParamTxt.getText().toString();
-            boolean twoMakesTen = new TwoMakesTenControllerImpl().isTwoMakesTen(firstParam, secondParam);
-            binding.returnTxt.setText(String.valueOf(twoMakesTen));
-            binding.returnTxt.setVisibility(View.VISIBLE);
+            boolean twoMakesTen = false;
+            try {
+                twoMakesTen = new TwoMakesTenControllerImpl().isTwoMakesTen(firstParam, secondParam);
+                binding.returnTxt.setText(String.valueOf(twoMakesTen));
+                binding.returnTxt.setVisibility(View.VISIBLE);
+            } catch (Exception e) {
+                e.printStackTrace();
+                binding.returnTxt.setText("Invalid output");
+
+            }
         });
     }
 }

@@ -6,7 +6,7 @@ public class TwoMakesTenControllerImpl implements TwoMakesTenController{
 
 
     @Override
-    public boolean isTwoMakesTen(String a, String b) {
+    public boolean isTwoMakesTen(String a, String b) throws Exception{
         boolean isTen = false;
         try {
             int tenA = Integer.parseInt(a);
