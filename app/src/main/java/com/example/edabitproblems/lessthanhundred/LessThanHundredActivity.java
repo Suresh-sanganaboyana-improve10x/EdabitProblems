@@ -24,7 +24,12 @@ public class LessThanHundredActivity extends AppCompatActivity implements LessTh
         binding.findLessThanBtn.setOnClickListener(v -> {
             String one = binding.text1.getText().toString();
             String two = binding.text2.getText().toString();
-            boolean findHundred = new LessThanHundredControllerImpl().findIsLessThanHundred(one, two);
+            boolean findHundred = false;
+            try {
+                findHundred = new LessThanHundredControllerImpl().findIsLessThanHundred(one, two);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             binding.booleanText.setText(String.valueOf(findHundred));
             binding.booleanText.setVisibility(View.VISIBLE);
         });

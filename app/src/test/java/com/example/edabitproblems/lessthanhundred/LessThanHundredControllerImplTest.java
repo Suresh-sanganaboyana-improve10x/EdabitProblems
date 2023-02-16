@@ -6,7 +6,7 @@ import org.junit.Assert;
 
 public class LessThanHundredControllerImplTest extends TestCase {
 
-    public void testFindIsLessThanHundred() {
+    public void testFindIsLessThanHundred() throws Exception {
         boolean expectedOutput = true;
         boolean actualOutput = new LessThanHundredControllerImpl().findIsLessThanHundred("22", "44");
         Assert.assertEquals(expectedOutput, actualOutput);
