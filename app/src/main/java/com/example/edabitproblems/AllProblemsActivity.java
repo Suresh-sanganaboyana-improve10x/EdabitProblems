@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.example.edabitproblems.checkdivisioblebyfive.CheckIfIntegerIsDivisibleFiveActivity;
 import com.example.edabitproblems.databinding.ActivityAllProblemsBinding;
 import com.example.edabitproblems.databinding.ActivityMainBinding;
+import com.example.edabitproblems.findthediscount.FindTheDiscountActivity;
 import com.example.edabitproblems.hoursMinutesIntoSeconds.HoursAndMinutesIntoSecondsActivity;
 import com.example.edabitproblems.lessthanhundred.LessThanHundredActivity;
 import com.example.edabitproblems.minutestoseconds.ConvertMinutesToSecondsActivity;
@@ -30,6 +31,7 @@ public class AllProblemsActivity extends AppCompatActivity {
         twoMakesTen();
         findLessThanHundredBtn();
         checkIfIsDivisibleByFive();
+        findDiscount();
     }
 
     private void threeProgrammers() {
@@ -70,6 +72,13 @@ public class AllProblemsActivity extends AppCompatActivity {
     private void checkIfIsDivisibleByFive() {
         binding.checkIfDivisibleBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, CheckIfIntegerIsDivisibleFiveActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void findDiscount() {
+        binding.findDisBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, FindTheDiscountActivity.class);
             startActivity(intent);
         });
     }
