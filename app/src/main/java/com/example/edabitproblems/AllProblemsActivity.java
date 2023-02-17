@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
+import com.example.edabitproblems.checkdivisioblebyfive.CheckIfIntegerIsDivisibleFiveActivity;
 import com.example.edabitproblems.databinding.ActivityAllProblemsBinding;
 import com.example.edabitproblems.databinding.ActivityMainBinding;
 import com.example.edabitproblems.hoursMinutesIntoSeconds.HoursAndMinutesIntoSecondsActivity;
@@ -28,6 +29,7 @@ public class AllProblemsActivity extends AppCompatActivity {
         convertHoursToMinutesIntoSeconds();
         twoMakesTen();
         findLessThanHundredBtn();
+        checkIfIsDivisibleByFive();
     }
 
     private void threeProgrammers() {
@@ -61,6 +63,13 @@ public class AllProblemsActivity extends AppCompatActivity {
     private void findLessThanHundredBtn() {
         binding.lessThanHundredBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, LessThanHundredActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void checkIfIsDivisibleByFive() {
+        binding.checkIfDivisibleBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, CheckIfIntegerIsDivisibleFiveActivity.class);
             startActivity(intent);
         });
     }
