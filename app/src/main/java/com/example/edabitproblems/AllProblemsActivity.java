@@ -10,6 +10,7 @@ import com.example.edabitproblems.checkdivisioblebyfive.CheckIfIntegerIsDivisibl
 import com.example.edabitproblems.databinding.ActivityAllProblemsBinding;
 import com.example.edabitproblems.databinding.ActivityMainBinding;
 import com.example.edabitproblems.findthediscount.FindTheDiscountActivity;
+import com.example.edabitproblems.fizzbuzzinterviewquestion.FizzBuzzActivity;
 import com.example.edabitproblems.hoursMinutesIntoSeconds.HoursAndMinutesIntoSecondsActivity;
 import com.example.edabitproblems.lessthanhundred.LessThanHundredActivity;
 import com.example.edabitproblems.minutestoseconds.ConvertMinutesToSecondsActivity;
@@ -34,6 +35,14 @@ public class AllProblemsActivity extends AppCompatActivity {
         checkIfIsDivisibleByFive();
         findDiscount();
         findNthEvenNUmber();
+        findFizzBuzz();
+    }
+
+    private void findFizzBuzz() {
+        binding.findFizzBuzzBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, FizzBuzzActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void findNthEvenNUmber() {
