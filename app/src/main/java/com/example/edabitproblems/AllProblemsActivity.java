@@ -13,6 +13,7 @@ import com.example.edabitproblems.findthediscount.FindTheDiscountActivity;
 import com.example.edabitproblems.hoursMinutesIntoSeconds.HoursAndMinutesIntoSecondsActivity;
 import com.example.edabitproblems.lessthanhundred.LessThanHundredActivity;
 import com.example.edabitproblems.minutestoseconds.ConvertMinutesToSecondsActivity;
+import com.example.edabitproblems.nthevennumber.NthEvenNumberActivity;
 import com.example.edabitproblems.threeprogrammers.ThreeProgrammersActivity;
 import com.example.edabitproblems.twoMakesTen.TwoMakesTenActivity;
 
@@ -32,6 +33,14 @@ public class AllProblemsActivity extends AppCompatActivity {
         findLessThanHundredBtn();
         checkIfIsDivisibleByFive();
         findDiscount();
+        findNthEvenNUmber();
+    }
+
+    private void findNthEvenNUmber() {
+        binding.findNthEvenNumBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, NthEvenNumberActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void threeProgrammers() {
